@@ -1,0 +1,51 @@
+/* Inspired by github's hacker theme https://github.com/pages-themes/hacker */
+body {
+    margin: 20 0;
+    padding: 0;
+    background-color: #151515;
+    color: #eaeaea;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+
+a {
+    color: #7dd0df;
+}
+
+li {
+    line-height: 1.4;
+}
+
+p {
+    font-style: italic;
+}
+
+h1 {
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-bottom: 1px dashed #b5e853;
+    padding: 20px 0;
+    margin: 0 0 40px 0;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: bold;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    color: #b5e853;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+        0 0 5px rgba(181, 232, 83, 0.1),
+        0 0 10px rgba(181, 232, 83, 0.1);
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+}
+
+header h2 {
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-bottom: 1px dashed #b5e853;
+    padding: 20px 0;
+    margin: 0 0 40px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+}
