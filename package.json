@@ -1,0 +1,11 @@
+{
+    "name": "browser-native",
+    "version": "1.0.0",
+    "description": "A sample demonstrating browser-native development",
+    "main": "src/main.js",
+    "private": true,
+    "scripts": {
+      "start": "npx http-server"
+    }
+}
+  
