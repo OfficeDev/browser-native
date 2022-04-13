@@ -1,0 +1,5 @@
+{
+    "title": "Arrow functions",
+    "description": "This sample shows how to use arrow functions",
+    "files": ["index.html", "index.js"]
+}
