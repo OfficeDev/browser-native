@@ -1,0 +1,100 @@
+/* Begin with the styles provided with github-embed */
+@import 'github-embed.css';
+
+/* Override styles for listing control */
+
+.github-embed-main {
+    background-color: #eab700;
+}
+
+.github-embed-nav-link {
+    font-weight: bolder;
+    color: #000000;
+}
+
+.github-embed-nav-link-shown {
+    text-decoration: underline;
+}
+
+.github-embed-nav-on-github {
+    font-weight: bolder;
+    color: #000000;
+}
+
+.github-embed-footer {
+    font-weight: bolder;
+    color: #000000;
+    font-size: smaller;
+}
+
+.github-embed-footer a {
+    color:#c82829;
+  }
+
+/* Override styles for code in dark mode */
+
+.hljs {
+    background-color: #000000;
+}
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #82c143;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #f90909;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #fcaa5d;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #cdf333;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #89b1e5;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #ce8bf7;
+}
+
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    color: #eee;
+    padding: 0.5em;
+  }

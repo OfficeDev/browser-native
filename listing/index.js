@@ -10,8 +10,8 @@
     const response = await fetch(`${sampleUrl}details.json`);
     const details = await (response.json());
 
-    document.getElementById('title').innerText =
-        `browser native | ${details.title.toLowerCase()}`;
+    document.getElementById('title').innerText +=
+        ` | ${details.title.toLowerCase()}`;
     document.getElementById('description').innerHTML = details.description;
 
     const embed = details.files.map(f => ({
