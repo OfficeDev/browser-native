@@ -1,16 +1,26 @@
 # browser-native
 
- * [Object classes](listing/?sample=classes)
- 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+## [Browse the samples here](https://OfficeDev.github.io/browser-native)
 
-As the maintainer of this project, please make a few updates:
+Each sample is in its own folder under /samples, and needs to include all source code needed by the sample and a **details.json** file as follows:
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+~~~json
+{
+    "title": "Title of the sample as text",
+    "description": "Description of the sample as HTML",
+    "files": ["index.html", "index.js"]
+}
+~~~
+
+When this is set up, you can browse the sample at [https://officedev.github.io/browser-native/listing/?sample=<(folder name containing the sample)>](https://officedev.github.io/browser-native/listing/?sample=classes). Note that all source code must work on a completely static site, and should NOT depend on a particular path since the /browser-native path will not be present when debugging locally.
+
+To debug locally,
+
+~~~shell
+npm install
+npm run start
+~~~
+
 
 ## Contributing
 
