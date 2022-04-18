@@ -39,6 +39,11 @@ h1 {
     -webkit-font-smoothing: antialiased;
 }
 
+h1 a {
+    text-decoration: none;
+    color: #eaeaea;
+}
+
 header h2 {
     background: rgba(0, 0, 0, 0.1);
     width: 100%;
