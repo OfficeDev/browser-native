@@ -38,7 +38,7 @@
     }
 
     var bob = new Geek ("Bob", "German", "C#", "The Matrix");
-    var julie = new Geek ("Julie", "Turner", "???", "???");
+    var julie = new Geek ("Julie", "Turner", "TypeScript", "Blade Runner");
 
     document.getElementById('output').innerHTML = `
     <p>${bob.getMessage()}</p>
