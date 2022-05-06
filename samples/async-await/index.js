@@ -20,16 +20,16 @@
         return err;
       }
     }
-
-    let resultsPromise = PromiseCall();
-    let resultsAsync = AsyncCall();
-
+    
     document.getElementById('output').innerText = `
       <h2>Promise Call</h2> 
-      <p>${resultsPromise}</p>
+      <p id="promises-result"></p>
       <h2>Async Call</h2>
-      <p>${resultsAsync}</p>
+      <p id="async-result"></p>
     `;
-    
+
+    PromiseCall().then(data => document.getElementById("promises-result").innerText(JSON.stringify(data)));
+    AsyncCall().then(data => document.getElementById("async-result").innerText(JSON.stringify(data)));
+
 })();
     
