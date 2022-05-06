@@ -21,15 +21,8 @@
       }
     }
     
-    document.getElementById('output').innerText = `
-      <h2>Promise Call</h2> 
-      <p id="promises-result"></p>
-      <h2>Async Call</h2>
-      <p id="async-result"></p>
-    `;
-
-    PromiseCall().then(data => document.getElementById("promises-result").innerText(JSON.stringify(data)));
-    AsyncCall().then(data => document.getElementById("async-result").innerText(JSON.stringify(data)));
+    PromiseCall().then(dataPromise => document.getElementById("promises-result").innerText = JSON.stringify(dataPromise));
+    AsyncCall().then(dataAsync => document.getElementById("async-result").innerText = JSON.stringify(dataAsync));
 
 })();
     
