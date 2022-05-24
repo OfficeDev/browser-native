@@ -1,7 +1,8 @@
 
 :root {
-    --main-color: red;
+    --main-color: lawngreen;
 }
-.myClass {
-   color: var(--main-color);
+
+.myClass>div{
+  color: var(--main-color);
 }
