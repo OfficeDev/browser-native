@@ -1,0 +1,5 @@
+{
+    "title": "Variables Scopes",
+    "description": "The sample shows how variables are scoped (var, let, const)",
+    "files": ["index.html", "index.js"]
+}

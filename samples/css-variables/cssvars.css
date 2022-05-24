@@ -1,0 +1,7 @@
+
+:root {
+    --main-color: red;
+}
+.myClass {
+   color: var(--main-color);
+}

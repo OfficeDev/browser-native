@@ -1,0 +1,9 @@
+{
+  "title": "CSS Variables",
+  "description": "In this sample we see how CSS Variables can help dynamically change our styling",
+  "files": [
+    "index.html",
+    "index.js",
+    "cssvars.css"
+  ]
+}
