@@ -1,45 +1,41 @@
-(() => {
 
   var gVar = "My Global Var";
   let gLet = "My Global Let";
   const gConst = "My Global Const";
 
-  document.getElementById("global-result").innerText(`gVar=${window.gVar} gLet=${window.gLet} gConst=${window.gConst}`);
+(() => {
+  document.getElementById("global-result").innerText = `gVar=${window.gVar} gLet=${window.gLet} gConst=${window.gConst}`;
 
-  const localResult = document.getElementById("locakl-result");
-  let newContent;
+  const localResult = document.getElementById("local-result");
+  var fVar = "My Function Var";
+  let fLet = "My Function Let";
+  const fConst = "My Function Const";
 
-  //These are invalid
-  newContent = document.createTextNode(`fLet=${fLet}`);
-  localResult.appendChild(newContent);
-  newContent = document.createTextNode(`fConst=${fConst}`);
-  localResult.appendChild(newContent);
+  localResult.appendChild(document.createElement("div")).innerText = `fLet=${(typeof fLet == "undefined")?"undefined":fLet}`;
+  localResult.appendChild(document.createElement("div")).innerText = `fConst=${(typeof fConst == "undefined")?"undefined":fConst}`;
+  localResult.appendChild(document.createElement("div")).innerText = `fVar=${(typeof fVar == "undefined")?"undefined":fVar}`;
+  localResult.appendChild(document.createElement("br"));
 
-  //This is valid
-  newContent = document.createTextNode(`fVar=${fVar}`);
-  localResult.appendChild(newContent);
+  if (true) {
+    var lVar = "My Local Var";
+    let lLet = "My Local Let";
+    const lConst = "My Local Const";
 
-  function myFunction() {
-    var fVar = "My Local Var";
-    let fLet = "My Local Let";
-    const fConst = "My Local Const";
-
-    newContent = document.createTextNode(`fVar=${fVar}`);
-    localResult.appendChild(newContent);
-    newContent = document.createTextNode(`fLet=${fLet}`);
-    localResult.appendChild(newContent);
-    newContent = document.createTextNode(`fConst=${fConst}`);
-    localResult.appendChild(newContent);
+    localResult.appendChild(document.createElement("div")).innerText = "Inside {} - These are valid";
+    localResult.appendChild(document.createElement("div")).innerText = `fVar=${(typeof fVar == "undefined")?"undefined":fVar}`;
+    localResult.appendChild(document.createElement("div")).innerText = `fLet=${(typeof fLet == "undefined")?"undefined":fLet}`;
+    localResult.appendChild(document.createElement("div")).innerText = `fConst=${(typeof fConst == "undefined")?"undefined":fConst}`;
+    localResult.appendChild(document.createElement("br"));
+    localResult.appendChild(document.createElement("div")).innerText = `lVar=${(typeof lVar == "undefined")?"undefined":lVar}`;
+    localResult.appendChild(document.createElement("div")).innerText = `lLet=${(typeof lLet == "undefined")?"undefined":lLet}`;
+    localResult.appendChild(document.createElement("div")).innerText = `lConst=${(typeof lConst == "undefined")?"undefined":lConst}`;
+    localResult.appendChild(document.createElement("br"));
   }
-
-  //These are invalid
-  newContent = document.createTextNode(`fLet=${fLet}`);
-  localResult.appendChild(newContent);
-  newContent = document.createTextNode(`fConst=${fConst}`);
-  localResult.appendChild(newContent);
-
-  //This is valid
-  newContent = document.createTextNode(`fVar=${fVar}`);
-  localResult.appendChild(newContent);
+  
+  localResult.appendChild(document.createElement("div")).innerText = "This is valid";
+  localResult.appendChild(document.createElement("div")).innerText = `lVar=${(typeof lVar == "undefined")?"undefined":lVar}`;
+  localResult.appendChild(document.createElement("div")).innerText = "These are not valid";
+  localResult.appendChild(document.createElement("div")).innerText = `lLet=${(typeof lLet == "undefined")?"undefined":lLet}`;
+  localResult.appendChild(document.createElement("div")).innerText = `lConst=${(typeof lConst == "undefined")?"undefined":lConst}`;
 
 })();
