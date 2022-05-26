@@ -1,0 +1,5 @@
+{
+    "title": "Template strings",
+    "description": "This sample shows how to use template strings",
+    "files": ["index.html", "index.js"]
+}
