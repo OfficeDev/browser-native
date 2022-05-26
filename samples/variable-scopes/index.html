@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>browser native sample</title>
+  <link rel="icon" href="data:;base64,="> <!-- Suppress favicon error -->
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    h3 {
+      color: darkred;
+    }
+
+    .results {
+      border: 1px solid darkred;
+      padding: 5px;
+    }
+
+    .code {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="output">
+    <h2>Global Scope</h2>
+    <div class="code">
+      var gVar = "My Global Var";<br />
+      let gLet = "My Global Let";<br />
+      const gConst = "My Global Const";<br /><br />
+      console.log(`${window.gVar} ${window.gLet} ${window.gConst}`);
+    </div>
+    <h3>Results</h3>
+    <div id="global-result" class="results"></div>
+    <h2>Function/Local Scope</h2>
+    <div class="code">
+      var fVar = "My Function Var";<br />
+      let fLet = "My Function Let";<br />
+      const fConst = "My Function Const";<br /><br />
+  
+      console.log(fLet);<br />
+      console.log(fConst);<br />
+      console.log(fVar);<br /><br />
+
+      if (true) {<br />
+      var lVar = "My Local Var";<br />
+      let lLet = "My Local Let";<br />
+      const lConst = "My Local Const";<br /><br />
+
+      console.log(fVar);<br />
+      console.log(fLet);<br />
+      console.log(fConst);<br />
+      console.log(lVar);<br />
+      console.log(lLet);<br />
+      console.log(lConst);<br />
+      }<br /><br />
+
+      //This is valid<br />
+      console.log(lVar);<br />
+      //These are invalid<br />
+      console.log(lLet);<br />
+      console.log(lConst);<br />
+    </div>
+    <h3>Results</h3>
+    <div id="local-result" class="results"></div>
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>

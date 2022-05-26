@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>browser native sample</title>
+  <link rel="icon" href="data:;base64,="> <!-- Suppress favicon error -->
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    code{
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="output" data-id="data-output" class="myClass">
+    <h2>document.querySelector(selector)</h2>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS Selector syntax</a>
+    <div>Get first element with id `output`:</div>
+    <code>document.querySelector("#output")</code>
+    <div>Get first div element:</div>
+    <code>document.querySelector("div")</code>
+    <div>Get first element where the attribute `data-id` equals `data-output`:</div>
+    <code>document.querySelector("[data-id=data-output]")</code>
+    <div>Get first element with class `myClass`:</div>
+    <code>document.querySelector(".myClass")</code>
+    <h2>document.querySelectorAll(name)</h2>
+    <div>Get all elements with attribute `data-id`:</div>
+    <code>document.querySelectorAll("[data-id]")</code>
+    <div>Get all div elements:</div>
+    <code>document.querySelectorAll("div")</code>
+    <div>Get all elements with attribute class equal to `myClass`:</div>
+    <code>document.querySelectorAll(".myClass")</code>
+    <h2>document.createElement(name)</h2>
+    <button id="create-element">Create Element</button>
+    <div id="new-element"></div>
+    <h2>parentNode.appendChild(node)</h2>
+    <button id="append-child">Append Child</button>
+    <ol id="append-item">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ol>
+    <h2>element.getAttribute/setAttribute()</h2>
+    <button id="set-attribute">Set Attribute to pink</button>
+    <div>background-color: <span id="get-attribute" style="background-color: initial;"></span></div>
+    <h2>element.addEventListener()</h2>
+    <div>All the buttons on this page demonstrate the ability to bind an event listener to a dom element.</div>
+  </div>
+  <script src="index.js"></script>
+
+</body>
+
+</html>

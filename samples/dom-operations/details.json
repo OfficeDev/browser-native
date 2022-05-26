@@ -1,0 +1,5 @@
+{
+    "title": "DOM Operations",
+    "description": "The sample shows how to use native DOM operations",
+    "files": ["index.html", "index.js"]
+}

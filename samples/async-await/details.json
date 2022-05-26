@@ -1,0 +1,8 @@
+{
+  "title": "Async/Await",
+  "description": "This sample shows a comparison between Promises and Async/Await pattern",
+  "files": [
+    "index.html",
+    "index.js"
+  ]
+}
