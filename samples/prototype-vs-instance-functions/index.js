@@ -22,7 +22,7 @@
         }
         
         // Prototype method - this behaves like classic JavaScript
-        getName() {
+        getName() {  // function getName() { // Wouldn't work - syntax error
             if (!this) {
                 return 'ERROR: <i>this</i> is undefined in getName()';
             }
@@ -30,7 +30,7 @@
         }
         
         // Instance method - this behaves like an object oriented language
-        getGreeting = () => {
+        getGreeting = () => { // getGreeting = function () {  // Works the same
             if (!this) {
                 return 'ERROR: <i>this</i> is undefined in getGreeting()';
             }
