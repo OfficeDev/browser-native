@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "private": true,
   "scripts": {
-    "start": "http-server"
+    "start": "http-server -c-1"
   },
   "devDependencies": {
     "http-server": "^14.1.0"

@@ -1,0 +1,5 @@
+{
+    "title": "Prototype vs. Instance Functions",
+    "description": "This sample shows how to use prototype vs. instance functions in JavaScript",
+    "files": ["index.html", "index.js"]
+}
