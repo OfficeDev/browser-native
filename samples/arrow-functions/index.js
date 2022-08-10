@@ -1,14 +1,13 @@
+'use strict';
 (() => {
     
-    function trad1 (a, b) { return a+b; }
-    trad2 = function (a,b) { return a+b; }
+    function trad1 (a, b) { return a+b; }   // Named function
+    let trad2 = function (a,b) { return a+b; }  // Anonymous function
 
-    // It's all syntactic sugar from here!
-
-    arrow1 = (a, b) => { return a+b; }  // Multiple args and multiple statements
-    arrow2 = (a,b) => a+b;              // Multiple args, returns value by default (no other statements)
-    arrow3 = a => { return a+1; }       // With one arg parenthesis are optional
-    arrow4 = a => a+1;                  // With one arg, returns value by default
+    let arrow1 = (a, b) => { return a+b; }  // Multiple args and multiple statements
+    let arrow2 = (a,b) => a+b;              // Multiple args, returns value by default (no other statements)
+    let arrow3 = a => { return a+1; }       // With one arg parenthesis are optional
+    let arrow4 = a => a+1;                  // With one arg, returns value by default
 
     const html = `All these functions are the same!
     <ul>
