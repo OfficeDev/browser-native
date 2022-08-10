@@ -1,0 +1,5 @@
+{
+    "title": "Arrow functions - callbacks",
+    "description": "This sample shows how the arrow functions in callbacks",
+    "files": ["index.html", "index.js"]
+}
