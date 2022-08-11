@@ -22,20 +22,20 @@
         }
         
         // Prototype method - `this` behaves like classic JavaScript
-        getName1() {  // function getName() { // Wouldn't work - syntax error
+        getName1() {  // OR use this syntax: getName1 = function() {
             return this.firstName + " " + this.lastName;
         }
         
         // Instance method - `this` is lexically tied to the class
         // definition, so behaves more like a Java or C# object
-        getName2 = () => { // getGreeting = function () {  // Works the same
+        getName2 = () => {
             return this.firstName + " " + this.lastName;
         }
     }
 
     var me = new Person("Bob", "German");
 
-    var result = 'Direct calls:<br /><ul>' +
+    var result = 'Calling methods in the me object:<br /><ul>' +
                  '<li>Regular function: ' + me.getName1() + '</li>' +
                  '<li>Arrow function: ' + me.getName2() + '</li>' +
                  '</ul>';
@@ -43,11 +43,11 @@
     var you = {
         firstName: 'Julie',
         lastName: 'Turner',
-        getName: me.getName1,            // Prototype function will reference this object
-        getGreeting: me.getName2     // Instance function will reference original object
+        getName: me.getName1,     // Prototype function will reference this object
+        getGreeting: me.getName2  // Instance function will reference original object
     }
     
-    result += 'Call via a 2nd object:<br /><ul>' +
+    result += 'Calling methods copied from me to you:<br /><ul>' +
               '<li>Regular function: ' + you.getName() + '</li>' +
               '<li>Arrow function: ' + you.getGreeting() + '</li>' +
               '</ul>'
