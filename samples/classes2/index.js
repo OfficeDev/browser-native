@@ -21,40 +21,35 @@
             this.lastName = lastName;
         }
         
-        // Prototype method - this behaves like classic JavaScript
-        getName() {  // function getName() { // Wouldn't work - syntax error
-            if (!this) {
-                return 'ERROR: <i>this</i> is undefined in getName()';
-            }
+        // Prototype method - `this` behaves like classic JavaScript
+        getName1() {  // function getName() { // Wouldn't work - syntax error
             return this.firstName + " " + this.lastName;
         }
         
-        // Instance method - this behaves like an object oriented language
-        getGreeting = () => { // getGreeting = function () {  // Works the same
-            if (!this) {
-                return 'ERROR: <i>this</i> is undefined in getGreeting()';
-            }
-            return "Hello " + this.firstName;
+        // Instance method - `this` is lexically tied to the class
+        // definition, so behaves more like a Java or C# object
+        getName2 = () => { // getGreeting = function () {  // Works the same
+            return this.firstName + " " + this.lastName;
         }
     }
 
     var me = new Person("Bob", "German");
 
     var result = 'Direct calls:<br /><ul>' +
-                 '<li>prototype: ' + me.getName() + '</li>' +
-                 '<li>instance: ' + me.getGreeting() + '</li>' +
+                 '<li>Regular function: ' + me.getName1() + '</li>' +
+                 '<li>Arrow function: ' + me.getName2() + '</li>' +
                  '</ul>';
                  
     var you = {
         firstName: 'Julie',
         lastName: 'Turner',
-        getName: me.getName,            // Prototype function will reference this object
-        getGreeting: me.getGreeting     // Instance function will reference original object
+        getName: me.getName1,            // Prototype function will reference this object
+        getGreeting: me.getName2     // Instance function will reference original object
     }
     
     result += 'Call via a 2nd object:<br /><ul>' +
-              '<li>prototype: ' + you.getName() + '</li>' +
-              '<li>instance: ' + you.getGreeting() + '</li>' +
+              '<li>Regular function: ' + you.getName() + '</li>' +
+              '<li>Arrow function: ' + you.getGreeting() + '</li>' +
               '</ul>'
 
     document.getElementById('output').innerHTML = result;
