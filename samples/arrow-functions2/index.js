@@ -1,8 +1,15 @@
 (() => {
 
+    // Function to add HTML to the page
+    let displayHTML = "";
+    function display(html) {
+        displayHTML += html;
+        document.getElementById('output').innerHTML = displayHTML;
+    }
+
     // For demonstration purposes, put a name property in the
     // global object
-    window.name = 'a property in the window object';
+    window.name = '(invalid name)';
 
     let mascot = {
         name: 'Parker',
@@ -17,11 +24,7 @@
         }
     }
 
-    var result = '<ul>' +
-        '<li>Regular function: ' + mascot.getMessage1() + '</li>' +
-        '<li>Arrow function: ' + mascot.getMessage2() + '</li>' +
-        '</ul>';
-
-    document.getElementById('output').innerHTML = result;
+    display(`Regular function: ${mascot.getMessage1()}<br />`);
+    display(`Arrow function: ${mascot.getMessage2()}`);
 
 })();

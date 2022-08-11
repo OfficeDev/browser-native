@@ -1,28 +1,36 @@
 (() => {
 
+    // Function to add HTML to the page
+    let displayHTML = "";
+    function display(html) {
+        displayHTML += html;
+        document.getElementById('output').innerHTML = displayHTML;
+    }
+
     // For demonstration purposes, put a name property in the
     // global object
-    window.name = 'a property in the window object';
+    window.name = '(invalid name)';
 
     let mascot = {
         name: 'Parker',
-        // In a regular function, `this` follows normal binding rules
         setAlarm1: function (timeout) {
             setTimeout(function () {
-                // this is the global object
-                alert (`Hey ${this.name}, time to wake up!`)
+                // In a regular function, `this` follows normal binding rules
+                // so `this` is the global object
+                display(`Hey ${this.name}, time to wake up!<br />`)
             }, timeout);
         },
-        // In an arrow function, `this` uses the parent's context, which
-        // is the global object in this case.
+
         setAlarm2: function (timeout) {
+            // In an arrow function, `this` uses the parent's context, which
+            // is the global object in this case.
             setTimeout(() => {
-                alert (`Hey ${this.name}, time to wake up!`)
+                display(`Hey ${this.name}, time to wake up!<br />`)
             }, timeout);
         }
     }
 
-    mascot.setAlarm1(2000);
-    mascot.setAlarm2(4000);
+    mascot.setAlarm1(1000);
+    mascot.setAlarm2(2000);
 
 })();
