@@ -20,9 +20,5 @@
 
     document.getElementById('output').innerHTML = html;
 
-    // FYI - you can also write a function to handle template literals in code,
-    // and tag them with the function name. For details, see
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-    
 })();
     
