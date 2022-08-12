@@ -40,6 +40,7 @@
   
   localResult.appendChild(document.createElement("div")).innerText = "After {} - This is valid";
   localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;
+  localResult.appendChild(document.createElement("div")).innerText = `  fVar=${(typeof fVar == "undefined")?"undefined":fVar}`;
   localResult.appendChild(document.createElement("div")).innerText = `  lVar=${(typeof lVar == "undefined")?"undefined":lVar}`;
   localResult.appendChild(document.createElement("br"));
   localResult.appendChild(document.createElement("div")).innerText = "After {} - These are not valid";
@@ -47,3 +48,14 @@
   localResult.appendChild(document.createElement("div")).innerText = `  lConst=${(typeof lConst == "undefined")?"undefined":lConst}`;
 
 })();
+
+localResult.appendChild(document.createElement("div")).innerText = "After Function - This is valid";
+localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;
+localResult.appendChild(document.createElement("div")).innerText = `  fVar=${(typeof fVar == "undefined")?"undefined":fVar}`;
+localResult.appendChild(document.createElement("div")).innerText = `  lVar=${(typeof lVar == "undefined")?"undefined":lVar}`;
+localResult.appendChild(document.createElement("br"));
+localResult.appendChild(document.createElement("div")).innerText = "After Function - These are not valid";
+localResult.appendChild(document.createElement("div")).innerText = `  fLet=${(typeof fLet == "undefined")?"undefined":fLet}`;
+localResult.appendChild(document.createElement("div")).innerText = `  fConst=${(typeof fConst == "undefined")?"undefined":fConst}`;
+localResult.appendChild(document.createElement("div")).innerText = `  lLet=${(typeof lLet == "undefined")?"undefined":lLet}`;
+localResult.appendChild(document.createElement("div")).innerText = `  lConst=${(typeof lConst == "undefined")?"undefined":lConst}`;
