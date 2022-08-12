@@ -35,6 +35,7 @@
     <div id="global-result" class="results"></div>
     <h2>Function/Local Scope</h2>
     <div class="code">
+      var gVar = "My Global Var (Reassigned Functionally)";
       var fVar = "My Function Var";<br />
       let fLet = "My Function Let";<br />
       const fConst = "My Function Const";<br /><br />
@@ -44,6 +45,7 @@
       console.log(fVar);<br /><br />
 
       if (true) {<br />
+      &nbsp;&nbsp;var gVar = "My Global Var (Reassigned Locally)";<br/>
       &nbsp;&nbsp;var lVar = "My Local Var";<br />
       &nbsp;&nbsp;let lLet = "My Local Let";<br />
       &nbsp;&nbsp;const lConst = "My Local Const";<br /><br />
