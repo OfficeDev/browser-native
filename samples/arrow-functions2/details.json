@@ -1,6 +1,7 @@
 {
     "title": "Arrow functions",
-    "description": "This sample shows how to use arrow functions",
+    "subtitle": "this binding",
+    "description": "This sample shows how the this keyword is different in arrow functions",
     "files": ["index.html", "index.js"],
     "nav": ["arrow-functions","arrow-functions2","arrow-functions3"]
 }

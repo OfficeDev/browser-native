@@ -1,0 +1,7 @@
+{
+    "title": "Classes",
+    "subtitle": "prototype vs. instance methods",
+    "description": "This sample shows how to use prototype vs. instance functions in JavaScript",
+    "files": ["index.html", "index.js"],
+    "nav": ["classes","classes2"]
+}

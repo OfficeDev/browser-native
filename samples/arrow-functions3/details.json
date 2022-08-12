@@ -1,6 +1,7 @@
 {
     "title": "Arrow functions",
-    "description": "This sample shows how to use arrow functions",
+    "subtitle": "callbacks",
+    "description": "This sample shows how the arrow functions in callbacks",
     "files": ["index.html", "index.js"],
     "nav": ["arrow-functions","arrow-functions2","arrow-functions3"]
 }
