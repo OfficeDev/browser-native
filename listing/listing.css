@@ -4,37 +4,37 @@
 /* Override styles for listing control */
 
 .github-embed-main {
-    background-color: #eab700;
+  background-color: #eab700;
 }
 
 .github-embed-nav-link {
-    font-weight: bolder;
-    color: #000000;
+  font-weight: bolder;
+  color: #000000;
 }
 
 .github-embed-nav-link-shown {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .github-embed-nav-on-github {
-    font-weight: bolder;
-    color: #000000;
+  font-weight: bolder;
+  color: #000000;
 }
 
 .github-embed-footer {
-    font-weight: bolder;
-    color: #000000;
-    font-size: smaller;
+  font-weight: bolder;
+  color: #000000;
+  font-size: smaller;
 }
 
 .github-embed-footer a {
-    color:#c82829;
-  }
+  color: #c82829;
+}
 
 /* Override styles for code in dark mode */
 
 .hljs {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 /* Tomorrow Comment */
@@ -92,9 +92,13 @@
   color: #ce8bf7;
 }
 
-  .hljs {
-    display: block;
-    overflow-x: auto;
-    color: #eee;
-    padding: 0.5em;
-  }
+.hljs {
+  display: block;
+  overflow-x: auto;
+  color: #eee;
+  padding: 0.5em;
+}
+
+.nav {
+  font-size: x-large;
+}

@@ -1,5 +1,6 @@
 {
-    "title": "Template strings",
+    "title": "Template literals",
     "description": "This sample shows how to use template strings",
-    "files": ["index.html", "index.js"]
+    "files": ["index.html", "index.js"],
+    "nav": ["template-strings","template-strings2"]
 }
