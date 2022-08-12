@@ -28,8 +28,8 @@
                 navHtml += `<a href="${window.location.href.replace(sample, e)}">${i++}</a>&nbsp;`;
             }
         })
+        document.getElementById('nav').innerHTML = navHtml;
     }
-    document.getElementById('nav').innerHTML = navHtml;
 
     if (details.subtitle) {
         document.getElementById('title').innerText += " - " + details.subtitle;
