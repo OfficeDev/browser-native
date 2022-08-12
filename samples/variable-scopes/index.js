@@ -41,6 +41,7 @@
   localResult.appendChild(document.createElement("div")).innerText = "After {} - This is valid";
   localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;
   localResult.appendChild(document.createElement("div")).innerText = `  lVar=${(typeof lVar == "undefined")?"undefined":lVar}`;
+  localResult.appendChild(document.createElement("br"));
   localResult.appendChild(document.createElement("div")).innerText = "After {} - These are not valid";
   localResult.appendChild(document.createElement("div")).innerText = `  lLet=${(typeof lLet == "undefined")?"undefined":lLet}`;
   localResult.appendChild(document.createElement("div")).innerText = `  lConst=${(typeof lConst == "undefined")?"undefined":lConst}`;
