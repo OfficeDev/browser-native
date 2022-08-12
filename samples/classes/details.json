@@ -1,5 +1,6 @@
 {
     "title": "Classes",
     "description": "This sample shows how to use object classes in modern JavaScript",
-    "files": ["index.html", "index.js"]
+    "files": ["index.html", "index.js"],
+    "nav": ["classes","classes2"]
 }
