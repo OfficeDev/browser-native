@@ -29,52 +29,51 @@
       var gVar = "My Global Var";<br />
       let gLet = "My Global Let";<br />
       const gConst = "My Global Const";<br /><br />
-      console.log(`${window.gVar} ${window.gLet} ${window.gConst}`);
+      console.log(`${gVar} ${gLet} ${gConst}`);
     </div>
     <h3>Results</h3>
     <div id="global-result" class="results"></div>
     <h2>Function/Local Scope</h2>
     <div class="code">
-      var gVar = "My Global Var (Reassigned Functionally)";<br/>
-      var fVar = "My Function Var";<br />
-      let fLet = "My Function Let";<br />
-      const fConst = "My Function Const";<br /><br />
+      function ScopeTest () {<br/>
+        &nbsp;&nbsp;var gVar = "My Global Var (Reassigned Functionally)";<br/>
+        &nbsp;&nbsp;var fVar = "My Function Var";<br />
+        &nbsp;&nbsp;let fLet = "My Function Let";<br />
+        &nbsp;&nbsp;const fConst = "My Function Const";<br /><br />
   
-      console.log(fLet);<br />
-      console.log(fConst);<br />
-      console.log(fVar);<br /><br />
+        &nbsp;&nbsp;console.log(`${gVar}`);<br/>
+        &nbsp;&nbsp;console.log(`${fVar} ${fLet} ${fConst}`);<br /><br />
 
-      if (true) {<br />
-      &nbsp;&nbsp;var gVar = "My Global Var (Reassigned Locally)";<br/>
-      &nbsp;&nbsp;var lVar = "My Local Var";<br />
-      &nbsp;&nbsp;let lLet = "My Local Let";<br />
-      &nbsp;&nbsp;const lConst = "My Local Const";<br /><br />
+        &nbsp;&nbsp;if (true) {<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;var gVar = "My Global Var (Reassigned Locally)";<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;var lVar = "My Local Var";<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;let lLet = "My Local Let";<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;const lConst = "My Local Const";<br /><br />
 
-      &nbsp;&nbsp;//Inside Braces
-      &nbsp;&nbsp;console.log(fVar);<br />
-      &nbsp;&nbsp;console.log(fLet);<br />
-      &nbsp;&nbsp;console.log(fConst);<br />
-      &nbsp;&nbsp;console.log(lVar);<br />
-      &nbsp;&nbsp;console.log(lLet);<br />
-      &nbsp;&nbsp;console.log(lConst);<br />
-      }<br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;//Inside Braces
+          &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${gVar}`);<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${fVar} ${fLet} ${fConst}`);<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${lVar} ${lLet} ${lConst}`);<br />
+          &nbsp;&nbsp;}<br /><br />
 
-      //After {} - This is valid<br />
-      console.log(gVar);<br/>
-      console.log(lVar);<br />
-      <br/>
-      //After {} - These are invalid<br />
-      console.log(lLet);<br />
-      console.log(lConst);<br /><br/>
+          &nbsp;&nbsp;//After &#123;&#125; - This is valid<br />
+          &nbsp;&nbsp;console.log(gVar);<br/>
+          &nbsp;&nbsp;console.log(fVar);<br/>
+          &nbsp;&nbsp;console.log(lVar);<br />
+          &nbsp;&nbsp;<br/>
+          &nbsp;&nbsp;//After &#123;&#125; - These are invalid<br />
+          &nbsp;&nbsp;console.log(lLet);<br />
+          &nbsp;&nbsp;console.log(lConst);<br />
+        }<br/><br/>
 
       //After Function - This is valid<br/>
-      console.log(gVar);<br/>
-      console.log(fVar);<br/>
-      console.log(lVar);<br /><br/>
+      console.log(gVar);<br/><br/>
 
-      //After Function - These are not valid<br/>      
+      //After Function - These are not valid<br/> 
+      console.log(fVar);<br/>    
       console.log(fLet);<br/>
       console.log(fConst);<br/>
+      console.log(lVar);<br /> 
       console.log(lLet);<br />
       console.log(lConst);<br />
     </div>
