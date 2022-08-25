@@ -1,6 +1,6 @@
 {
-  "title": "Variables Scopes - Var",
-  "description": "The sample shows how var variables are scoped",
+  "title": "Variables Scopes - Let/Const",
+  "description": "The sample shows how let/const variables are scoped",
   "files": [
     "index.html",
     "index.js"
