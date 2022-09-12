@@ -1,5 +1,9 @@
 {
     "title": "Web component",
     "description": "Simple stopwatch web component",
-    "files": ["index.html", "index.js"]
+    "files": ["index.html",
+              "stopwatch/style.css",
+              "stopwatch/htmlTemplate.js",
+              "stopwatch/stopwatch.js"
+    ]
 }

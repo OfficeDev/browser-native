@@ -14,10 +14,12 @@ export class stopwatch extends HTMLElement {
     constructor() {
         super();
 
+        // 1. Attach the shadow DOM and add the content from the HTML template
         const shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.adoptedStyleSheets = [ stylesheet ];
         shadowRoot.appendChild(htmlTemplate.content.cloneNode(true));
 
+        // 2. Find and update dynamic element(s)
         this.#buttonElement = shadowRoot.querySelector('button');
         this.#buttonElement.innerText = this.#formatTime(0);
         this.#buttonElement.style.backgroundColor = 
