@@ -13,23 +13,23 @@ export class stopwatch extends HTMLElement {
     constructor() {
         super();
 
-        // 1. Attach the shadow DOM and add the content from the HTML template
-        const shadowRoot = this.attachShadow({mode: 'open'});
-        shadowRoot.adoptedStyleSheets = [ stylesheet ];
+        // Attach the shadow DOM
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+        shadowRoot.adoptedStyleSheets = [stylesheet];
 
-        // 2. Find and update dynamic element(s)
+        // Create and add the button element
         this.#buttonElement = document.createElement('button');
         this.#buttonElement.innerText = this.#formatTime(0);
-        this.#buttonElement.style.backgroundColor = 
+        this.#buttonElement.style.backgroundColor =
             this.attributes['color'].value;
         shadowRoot.appendChild(this.#buttonElement);
 
         setInterval(() => {
             if (this.#running) {
                 const displayTime = Date.now() - this.#startTime + this.#accumulatedTime;
-                this.#buttonElement.innerText = this.#formatTime(displayTime);    
+                this.#buttonElement.innerText = this.#formatTime(displayTime);
             }
-        }, TICK_INTERVAL);    
+        }, TICK_INTERVAL);
     }
 
     #clickHandler() {
@@ -51,7 +51,7 @@ export class stopwatch extends HTMLElement {
     #formatTime(milliseconds) {
         const date = new Date(0);
         date.setMilliseconds(milliseconds);
-        return date.toISOString().substring(11,19);
+        return date.toISOString().substring(11, 19);
     }
 
     async connectedCallback() {
