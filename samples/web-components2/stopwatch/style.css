@@ -1,0 +1,22 @@
+#stopwatch {
+    width: 10em;
+}
+
+button {
+    height: 3em;
+    width: 100%;
+    border-radius: 6pt;
+    font-size: 12pt;
+    background-color: aliceblue;
+    border-color: black;
+    color: black;
+}
+
+#caption {
+    width: 100%;
+    font-size: 8pt;
+    font-style: italic;
+    color: lightgray;
+    text-align: center;
+    padding-bottom: 6pt;
+}
