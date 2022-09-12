@@ -8,16 +8,25 @@ export class stopwatch extends HTMLElement {
     #buttonElement;
     #startTime = Date.now();
     #running = false;
+    #caption = '';
 
     constructor() {
         super();
+
+        this.#caption = this.innerText;
 
         const shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.adoptedStyleSheets = [ stylesheet ];
 
         this.#buttonElement = document.createElement('button');
         this.#buttonElement.innerText = this.#formatTime(0);
+        this.#buttonElement.style.backgroundColor = 
+            this.attributes['color'].value;
         shadowRoot.appendChild(this.#buttonElement);
+
+        const captionElement = document.createElement('div');
+        captionElement.innerText = this.#caption;
+        shadowRoot.appendChild(captionElement);
 
         setInterval(() => {
             if (this.#running) {
@@ -51,9 +60,7 @@ export class stopwatch extends HTMLElement {
     }
 
     async connectedCallback() {
-
         this.onclick = this.#clickHandler;
-
     }
 }
 
