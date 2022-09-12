@@ -1,58 +1,51 @@
 import stylesheet from './style.css' assert { type: 'css' };
+import htmlTemplate from './htmlTemplate.js';
 
 const TICK_INTERVAL = 1000;
 
 export class stopwatch extends HTMLElement {
 
     // Component state is in these fields:
-    #buttonElement;
-    #startTime = Date.now();
-    #running = false;
-    #caption = '';
+    #buttonElement;         // Button that displays time
+    #running = false;       // Current state of stopwatch
+    #startTime = 0;         // Time the timer was last started
+    accumulatedTime = 0;    // Total runtime after stopping and starting
 
     constructor() {
         super();
 
-        this.#caption = this.innerText;
-
         const shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.adoptedStyleSheets = [ stylesheet ];
+        shadowRoot.appendChild(htmlTemplate.content.cloneNode(true));
 
-        this.#buttonElement = document.createElement('button');
+        this.#buttonElement = shadowRoot.querySelector('button');
         this.#buttonElement.innerText = this.#formatTime(0);
         this.#buttonElement.style.backgroundColor = 
             this.attributes['color'].value;
-        shadowRoot.appendChild(this.#buttonElement);
-
-        const captionElement = document.createElement('div');
-        captionElement.innerText = this.#caption;
-        shadowRoot.appendChild(captionElement);
 
         setInterval(() => {
             if (this.#running) {
-                const currentTime = Date.now() - this.#startTime;
-                this.#buttonElement.innerText = this.#formatTime(currentTime);    
+                const displayTime = Date.now() - this.#startTime + this.accumulatedTime;
+                this.#buttonElement.innerText = this.#formatTime(displayTime);    
             }
         }, TICK_INTERVAL);    
     }
 
     #clickHandler() {
         if (!this.#running) {
-            if (this.#buttonElement.innerHTML === this.#formatTime(0)) {
-                // Watch was already reset; start it now
-                this.#startTime = Date.now();
-                this.#running = true;
-            } else {
-                // Reset the watch to 0
-                this.#buttonElement.innerHTML = this.#formatTime(0);
-            }
+            // Start the timer
+            this.#startTime = Date.now();
+            this.#buttonElement.style.textDecoration = 'underline';
+            this.#running = true;
         } else {
-            // Stop the watch
+            // Stop the timer
+            this.accumulatedTime += Date.now() - this.#startTime;
+            this.#buttonElement.style.textDecoration = 'none';
             this.#running = false;
         }
     }
 
-    // Take a moment and avoid a dependency
+    // Convert time in ms to string in format 00:00:00
     #formatTime(milliseconds) {
         const date = new Date(0);
         date.setMilliseconds(milliseconds);
