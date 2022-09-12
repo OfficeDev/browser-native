@@ -1,0 +1,9 @@
+button {
+    height: 3em;
+    width: 10em;
+    border-radius: 6pt;
+    font-size: 12pt;
+    background-color: aliceblue;
+    border-color: black;
+    color: black;
+}
