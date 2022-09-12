@@ -8,7 +8,7 @@ export class stopwatch extends HTMLElement {
     #buttonElement;         // Button that displays time
     #running = false;       // Current state of stopwatch
     #startTime = 0;         // Time the timer was last started
-    accumulatedTime = 0;    // Total runtime after stopping and starting
+    #accumulatedTime = 0;    // Total runtime after stopping and starting
 
     constructor() {
         super();
@@ -23,7 +23,7 @@ export class stopwatch extends HTMLElement {
 
         setInterval(() => {
             if (this.#running) {
-                const displayTime = Date.now() - this.#startTime + this.accumulatedTime;
+                const displayTime = Date.now() - this.#startTime + this.#accumulatedTime;
                 this.#buttonElement.innerText = this.#formatTime(displayTime);    
             }
         }, TICK_INTERVAL);    
@@ -37,7 +37,7 @@ export class stopwatch extends HTMLElement {
             this.#running = true;
         } else {
             // Stop the timer
-            this.accumulatedTime += Date.now() - this.#startTime;
+            this.#accumulatedTime += Date.now() - this.#startTime;
             this.#buttonElement.style.textDecoration = 'none';
             this.#running = false;
         }

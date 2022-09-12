@@ -13,7 +13,11 @@
 <body>
 
   <p>This button is on the page:
-    <button>TEST</button>
+    <ul><li>
+      <button onclick="(() => { event.currentTarget.innerText += ' again'; })()">
+        Please do not push this button
+      </button>  
+    </li></ul>
   </p>
   <p>These buttons are web components:
     <ul>
