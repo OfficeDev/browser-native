@@ -3,8 +3,8 @@
     "subtitle": "using the shadow DOM",
     "description": "Web component with DOM isolation",
     "files": ["index.html",
+              "style.css",
               "stopwatch/style.css",
-              "stopwatch/htmlTemplate.js",
               "stopwatch/stopwatch.js"
     ],
     "nav": ["web-components","web-components2","web-components3"]
