@@ -1,6 +1,6 @@
 {
-  "title": "Variables Scopes - Global",
-  "description": "The sample starts with showing global variable scopes",
+  "title": "Variables Scopes - Function Scoped",
+  "description": "The sample shows how function scoped variables are scoped",
   "files": [
     "index.html",
     "index.js"
