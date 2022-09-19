@@ -1,6 +1,6 @@
 {
   "title": "Variables Scopes - Block Scoped",
-  "description": "The sample shows how block scoped variables work",
+  "description": "Sample 3 shows how block scoped variables work",
   "files": [
     "index.html",
     "index.js"

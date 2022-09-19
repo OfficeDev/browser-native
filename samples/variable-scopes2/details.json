@@ -1,6 +1,6 @@
 {
   "title": "Variables Scopes - Function Scoped",
-  "description": "The sample shows how function scoped variables are scoped",
+  "description": "Sample 2 shows how function scoped variables work",
   "files": [
     "index.html",
     "index.js"
