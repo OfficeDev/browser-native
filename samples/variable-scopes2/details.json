@@ -1,12 +1,13 @@
 {
-  "title": "Variables Scopes - Let/Const",
-  "description": "The sample shows how let/const variables are scoped",
+  "title": "Variables Scopes - Function Scoped",
+  "description": "The sample shows how function scoped variables are scoped",
   "files": [
     "index.html",
     "index.js"
   ],
   "nav": [
     "variable-scopes",
-    "variable-scopes2"
+    "variable-scopes2",
+    "variable-scopes3"
   ]
 }

@@ -1,33 +1,14 @@
 
-  var gVar = "My Global Var";
-  let gLet = "My Global Let";
-  const gConst = "My Global Const";
+//Global Variable Declaration
+var globalVar = "My Global Var";
+let globalLet = "My Global Let";
+const globalConst = "My Global Const";
 
 (() => {
-  document.getElementById("global-result").innerText = `gVar=${gVar} gLet=${gLet} gConst=${gConst}`;
-  const localResult = document.getElementById("local-result");
+  var globalResult = document.getElementById("global-result");
 
-  function ScopeTest () {
-    var gVar = "My Global Var (Reassigned Functionally)";
-    
-    localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;    
-    localResult.appendChild(document.createElement("br"));
-
-    if (true) {
-      var gVar = "My Global Var (Reassigned Locally)";
-      
-      localResult.appendChild(document.createElement("div")).innerText = "Inside {} - These are valid";
-      localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;
-      localResult.appendChild(document.createElement("br"));
-    }
-    
-    localResult.appendChild(document.createElement("div")).innerText = "After {} - This is valid";
-    localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;
-  }
-  
-  ScopeTest();
-
-  localResult.appendChild(document.createElement("br"));
-  localResult.appendChild(document.createElement("div")).innerText = "After Function - This is valid";
-  localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;
-  })();
+  //Set the innerHTML of the result div to the values of the variables defined in the global variables section
+  globalResult.innerHTML = `<div>The value of "globalVar" is: <span>${globalVar}</span></div>
+    <div>The value of "globalLet" is: <span>${globalLet}</span></div>
+    <div>The value of "globalConst" is: <span>${globalConst}</span></div>`;
+})();

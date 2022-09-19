@@ -15,6 +15,11 @@
       padding: 5px;
     }
 
+    .results > div > span {
+      font-weight: 800;
+      color: yellow;
+    }
+
     .code {
       margin-left: 20px;
     }
@@ -23,62 +28,12 @@
 
 <body>
 
-  <div id="output">
-    <h2>Global Scope</h2>
-    <div class="code">
-      var gVar = "My Global Var";<br />
-      let gLet = "My Global Let";<br />
-      const gConst = "My Global Const";<br /><br />
-      console.log(`${gVar} ${gLet} ${gConst}`);
-    </div>
-    <h3>Results</h3>
+  <div>
+    <h2>Function Scope</h2>
+    <h3>Function Results</h3>
+    <div id="function-result" class="results"></div>
+    <h3>Global Results</h3>
     <div id="global-result" class="results"></div>
-    <h2>Function/Local Scope</h2>
-    <div class="code">
-      function ScopeTest () {<br/>
-        &nbsp;&nbsp;var gVar = "My Global Var (Reassigned Functionally)";<br/>
-        &nbsp;&nbsp;var fVar = "My Function Var";<br />
-        &nbsp;&nbsp;let fLet = "My Function Let";<br />
-        &nbsp;&nbsp;const fConst = "My Function Const";<br /><br />
-  
-        &nbsp;&nbsp;console.log(`${gVar}`);<br/>
-        &nbsp;&nbsp;console.log(`${fVar} ${fLet} ${fConst}`);<br /><br />
-
-        &nbsp;&nbsp;if (true) {<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;var gVar = "My Global Var (Reassigned Locally)";<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;var lVar = "My Local Var";<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;let lLet = "My Local Let";<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;const lConst = "My Local Const";<br /><br />
-
-          &nbsp;&nbsp;&nbsp;&nbsp;//Inside Braces
-          &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${gVar}`);<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${fVar} ${fLet} ${fConst}`);<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;console.log(`${lVar} ${lLet} ${lConst}`);<br />
-          &nbsp;&nbsp;}<br /><br />
-
-          &nbsp;&nbsp;//After &#123;&#125; - This is valid<br />
-          &nbsp;&nbsp;console.log(gVar);<br/>
-          &nbsp;&nbsp;console.log(fVar);<br/>
-          &nbsp;&nbsp;console.log(lVar);<br />
-          &nbsp;&nbsp;<br/>
-          &nbsp;&nbsp;//After &#123;&#125; - These are invalid<br />
-          &nbsp;&nbsp;console.log(lLet);<br />
-          &nbsp;&nbsp;console.log(lConst);<br />
-        }<br/><br/>
-
-      //After Function - This is valid<br/>
-      console.log(gVar);<br/><br/>
-
-      //After Function - These are not valid<br/> 
-      console.log(fVar);<br/>    
-      console.log(fLet);<br/>
-      console.log(fConst);<br/>
-      console.log(lVar);<br /> 
-      console.log(lLet);<br />
-      console.log(lConst);<br />
-    </div>
-    <h3>Results</h3>
-    <div id="local-result" class="results"></div>
   </div>
 
   <script src="index.js"></script>
