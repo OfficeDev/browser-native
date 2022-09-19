@@ -1,58 +1,32 @@
-
-  var gVar = "My Global Var";
-  let gLet = "My Global Let";
-  const gConst = "My Global Const";
+//Global Variable Declaration
+var globalVar = "My Global Var";
+let globalLet = "My Global Let";
+const globalConst = "My Global Const";
 
 (() => {
-  document.getElementById("global-result").innerText = `gVar=${gVar} gLet=${gLet} gConst=${gConst}`;
-  const localResult = document.getElementById("local-result");
+  var globalResult = document.getElementById("global-result");
+  var functionResult = document.getElementById("function-result");
 
-  function ScopeTest () {
-    var gVar = "My Global Var (Reassigned Functionally)";
-    var fVar = "My Function Var";
-    let fLet = "My Function Let";
-    const fConst = "My Function Const";
+  //Define a function
+  function FunctionScopeEx() {
+    var functionVar = "My Function Var";
+    let functionLet = "My Function Let";
+    const functionConst = "My Function Const";
 
-    localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;    
-    localResult.appendChild(document.createElement("div")).innerText = `  fVar=${fVar} fLet=${fLet} fConst=${fConst}`;
-    localResult.appendChild(document.createElement("br"));
-
-    if (true) {
-      var gVar = "My Global Var (Reassigned Locally)";
-      var lVar = "My Local Var";
-      let lLet = "My Local Let";
-      const lConst = "My Local Const";
-
-      localResult.appendChild(document.createElement("div")).innerText = "Inside {} - These are valid";
-      localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;
-      localResult.appendChild(document.createElement("br"));
-      localResult.appendChild(document.createElement("div")).innerText = `  fVar=${fVar} fLet=${fLet} fConst=${fConst}`;
-      localResult.appendChild(document.createElement("br"));
-      localResult.appendChild(document.createElement("div")).innerText = `  lVar=${lVar} lLet=${lLet} lConst=${lConst}`;
-      localResult.appendChild(document.createElement("br"));
-    }
-    
-    localResult.appendChild(document.createElement("div")).innerText = "After {} - This is valid";
-    localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;
-    localResult.appendChild(document.createElement("div")).innerText = `  fVar=${(typeof fVar == "undefined")?"undefined":fVar}`;
-    localResult.appendChild(document.createElement("div")).innerText = `  lVar=${(typeof lVar == "undefined")?"undefined":lVar}`;
-    localResult.appendChild(document.createElement("br"));
-    localResult.appendChild(document.createElement("div")).innerText = "After {} - These are not valid";
-    localResult.appendChild(document.createElement("div")).innerText = `  lLet=${(typeof lLet == "undefined")?"undefined":lLet}`;
-    localResult.appendChild(document.createElement("div")).innerText = `  lConst=${(typeof lConst == "undefined")?"undefined":lConst}`;
+    //Set the innerHTML of the result div to the values of the variables defined in the function variables section
+    functionResult.innerHTML = `<div>The value of "globalVar" is: <span>${globalVar}</span></div>
+    <div>The value of "globalLet" is: <span>${globalLet}</span></div>
+    <div>The value of "globalConst" is: <span>${globalConst}</span></div>
+    <br/>
+    <div>The value of "functionVar" is: <span>${functionVar}</span></div>
+    <div>The value of "functionLet" is: <span>${functionLet}</span></div>
+     <div>The value of "functionConst" is: <span>${functionConst}</span></div>`;
   }
-  
-  ScopeTest();
 
-  localResult.appendChild(document.createElement("br"));
-  localResult.appendChild(document.createElement("div")).innerText = "After Function - This is valid";
-  localResult.appendChild(document.createElement("div")).innerText = `  gVar=${(typeof gVar == "undefined")?"undefined":gVar}`;
-  localResult.appendChild(document.createElement("br"));
-  localResult.appendChild(document.createElement("div")).innerText = "After Function - These are not valid";
-  localResult.appendChild(document.createElement("div")).innerText = `  fVar=${(typeof fVar == "undefined")?"undefined":fVar}`;
-  localResult.appendChild(document.createElement("div")).innerText = `  fLet=${(typeof fLet == "undefined")?"undefined":fLet}`;
-  localResult.appendChild(document.createElement("div")).innerText = `  fConst=${(typeof fConst == "undefined")?"undefined":fConst}`;
-  localResult.appendChild(document.createElement("div")).innerText = `  lVar=${(typeof lVar == "undefined")?"undefined":lVar}`;
-  localResult.appendChild(document.createElement("div")).innerText = `  lLet=${(typeof lLet == "undefined")?"undefined":lLet}`;
-  localResult.appendChild(document.createElement("div")).innerText = `  lConst=${(typeof lConst == "undefined")?"undefined":lConst}`;
+  FunctionScopeEx();
+
+  //Set the innerHTML of the result div to the values of the variables defined in the global variables section
+  globalResult.innerHTML = `<div>The value of "functionVar" is: <span>${(typeof functionVar == "undefined") ? "undefined" : functionVar}</span></div>
+    <div>The value of "functionLet" is: <span>${(typeof functionLet == "undefined") ? "undefined" : functionLet}</span></div>
+    <div>The value of "functionConst" is: <span>${(typeof functionLet == "undefined") ? "undefined" : functionConst}</span></div>`;
 })();

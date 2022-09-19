@@ -1,6 +1,6 @@
 {
-  "title": "Variables Scopes - Global",
-  "description": "The sample starts with showing global variable scopes",
+  "title": "Variables Scopes - Block Scoped",
+  "description": "Sample 3 shows how block scoped variables work",
   "files": [
     "index.html",
     "index.js"
