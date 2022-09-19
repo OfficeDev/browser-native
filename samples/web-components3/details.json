@@ -1,0 +1,11 @@
+{
+    "title": "Web components",
+    "subtitle": "using HTML templates",
+    "description": "Web component using an HTML template and slot",
+    "files": ["index.html",
+              "stopwatch/style.css",
+              "stopwatch/htmlTemplate.js",
+              "stopwatch/stopwatch.js"
+    ],
+    "nav": ["web-components","web-components2","web-components3"]
+}

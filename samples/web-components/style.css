@@ -1,0 +1,12 @@
+button {
+    border-color: yellow;
+    color: yellow;
+    background-color: black;
+    padding: 2pt 6pt;
+}
+
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
