@@ -1,0 +1,6 @@
+{
+    "title": "Template literals",
+    "description": "This sample shows how to use template strings",
+    "files": ["index.html", "index.js", "modules/module1.js", "modules/module2.js", "modules/module3.js"],
+    "nav": ["es-modules"]
+}
