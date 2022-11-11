@@ -54,3 +54,23 @@ header h2 {
     font-weight: 300;
     color: #666;
 }
+
+.slide {
+    width: 50%;
+}
+
+.caption {
+    width: 50%;
+    text-align: center;
+}
+
+.resource > td {
+    padding: 4pt 16pt;
+}
+.resource > td:first-child {
+    border-right: solid #b5e853;
+    text-align: right;
+}
+.resource  a {
+    color: white;
+}
