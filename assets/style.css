@@ -44,6 +44,10 @@ h1 a {
     color: #eaeaea;
 }
 
+h2 {
+    color: #b5e853;
+}
+
 header h2 {
     background: rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -53,6 +57,10 @@ header h2 {
     font-size: 18px;
     font-weight: 300;
     color: #666;
+}
+
+h3 {
+    text-decoration: underline;
 }
 
 .slide {
@@ -65,7 +73,8 @@ header h2 {
 }
 
 .resource > td {
-    padding: 4pt 16pt;
+    font-size: large;
+    padding: 8pt;
 }
 .resource > td:first-child {
     border-right: solid #b5e853;
@@ -73,4 +82,12 @@ header h2 {
 }
 .resource  a {
     color: white;
+}
+
+.callout {
+    font-size: x-large;
+    width: 30em;
+    border-style: solid;
+    text-align: center;
+    padding: 8pt;
 }
