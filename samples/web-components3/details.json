@@ -1,11 +1,25 @@
 {
-    "title": "Web components",
-    "subtitle": "using HTML templates",
-    "description": "Web component using an HTML template and slot",
-    "files": ["index.html",
-              "stopwatch/style.css",
-              "stopwatch/htmlTemplate.js",
-              "stopwatch/stopwatch.js"
-    ],
-    "nav": ["web-components","web-components2","web-components3"]
+  "title": "Web components",
+  "subtitle": "Using HTML templates to create reusable components",
+  "description": "This project demonstrates how to create a web component using an HTML template and slot. The component is a simple stopwatch that can be customized with different colors.",
+  "files": [
+    "index.html",
+    "stopwatch/style.css",
+    "stopwatch/htmlTemplate.js",
+    "stopwatch/stopwatch.js"
+  ],
+  "nav": [
+    {
+      "label": "Web Components",
+      "link": "web-components"
+    },
+    {
+      "label": "Web Components 2",
+      "link": "web-components2"
+    },
+    {
+      "label": "Web Components 3",
+      "link": "web-components3"
+    }
+  ]
 }
