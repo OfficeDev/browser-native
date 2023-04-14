@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>browser native sample</title>
+  <title>Browser Native Sample</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:;base64,="> <!-- Suppress favicon error -->
   <link rel="stylesheet" href="../../assets/style.css">
   <link rel="stylesheet" href="style.css">
@@ -12,28 +14,49 @@
 
 <body>
 
-  <p>This button is on the page:
-    <ul><li>
-      <button onclick="(() => { event.currentTarget.innerText += ' again'; })()">
-        Please do not push this button
-      </button>  
-    </li></ul>
-  </p>
-  <p>These buttons are web components:
-    <ul>
-      <li>
-        <stop-watch color="CornflowerBlue">First timer</stop-watch>
-      </li>
-      <li>
-        <stop-watch color="FireBrick">Second timer</stop-watch>
-      </li>
-      <li>
-        <stop-watch color="Teal">
-          <span style="color: teal;">Yet another</span> timer
-        </stop-watch>
-      </li>
-    </ul>
-  </p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Browser Native Sample</h1>
+      <p>This button is on the page:</p>
+      <ul>
+        <li>
+          <button onclick="(() => { event.currentTarget.innerText += ' again'; })()" 
+            style="border-color: yellow; color: yellow; background-color: black; padding: 2pt 6pt;">
+            Please do not push this button
+          </button>  
+        </li>
+      </ul>
+
+      <p>These buttons are web components:</p>
+      <ul>
+        <li>
+          <stop-watch color="CornflowerBlue">First timer</stop-watch>
+        </li>
+        <li>
+          <stop-watch color="FireBrick">Second timer</stop-watch>
+        </li>
+        <li>
+          <stop-watch color="Teal">
+            <span style="color: teal;">Yet another</span> timer
+          </stop-watch>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Browser Native Sample</p>
+  </footer>
 
 </body>
 
